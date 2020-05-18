@@ -6,14 +6,17 @@ The repo contains the dataset file and our best audio classification model.
 
 ## Dataset
 
-To download VGGSound, we provide a csv file. For each YouTube video, we provide YouTube URLs, time stamps, audio labels and train/test split. Each line in the csv file has columns defined by here: 
+To download VGGSound, we provide a [csv file](./vggsound.csv). For each YouTube video, we provide YouTube URLs, time stamps, audio labels and train/test split. Each line in the csv file has columns defined by here.
 
 ```
 # YouTube ID, start seconds, label,train/test split. 
 ```
 
+A helpful link for [data download](https://github.com/marl/audiosetdl)!
 
 ## Audio classification 
+
+We detail the audio classfication results here. Note, "Pretrain" refers whether the model was pretrained on YouTube-8M dataset. "Dataset (common)" means it is a subset of the dataset. This subset only contains data of common classes([listed here](./Common.txt)) between AudioSet and VGGSound. "ASTest" is the intersection of AudioSet and VGGSound testsets.
 
 | 	  | Model    | Aggregation   | Pretrain           | Finetune/Train  | Test          | mAP   | AUC   | d-prime |
 |:---:|:--------:|:-------------:| :-------------:    |:--------------: |:-------------:|:-----:|:-----:|:-------:| 
@@ -27,6 +30,27 @@ To download VGGSound, we provide a csv file. For each YouTube video, we provide 
 | H   | ResNet18 | AveragePool   | :x:                |VGGSound         | VGGSound      | 0.489 | 0.963 | 2.523   |
 | I   | ResNet18 | NetVLAD       | :x:                |VGGSound         | VGGSound      | 0.496 | 0.963 | 2.534   |
 
+
+
+## Environment
+
+* Python 3.6.8
+* Pytorch 1.3.0
+
+
+
+## Pretrained model and evaluation 
+
+We provide the pretrained model **I** here.
+
+To evaluate the model performance,
+
+```
+python eval.py --data "./test.csv" --prediction "./resnet18_vlad/"
+```
+
+
+
 ## Citation
 ```
 @InProceedings{Chen20,
@@ -38,4 +62,4 @@ To download VGGSound, we provide a csv file. For each YouTube video, we provide 
 ```
 
 ## License
-The VGG-Sound dataset is available to download for commercial/research purposes under a Creative Commons Attribution 4.0 International License. The copyright remains with the original owners of the video. A complete version of the license can be found here.
+The VGG-Sound dataset is available to download for commercial/research purposes under a Creative Commons Attribution 4.0 International License. The copyright remains with the original owners of the video. A complete version of the license can be found [here](./LICENCE.txt).
