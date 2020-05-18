@@ -25,8 +25,8 @@ We detail the audio classfication results here. Note, "Pretrain" refers whether 
 | C   | VGGish   | \             | :x:                |VGGSound (common)| ASTest        | 0.301 | 0.910 | 1.900   |
 | D   | ResNet18 | AveragePool   | :x:                |VGGSound (common)| ASTest        | 0.328 | 0.923 | 2.024   |
 | E   | ResNet18 | NetVLAD       | :x:                |VGGSound (common)| ASTest        | 0.369 | 0.927 | 2.058   |
-| F   | ResNet18 | AveragePool   | :x:                |VGGSound         | ASTest        | 0.434 | 0.946 | 2.279   |
-| G   | ResNet18 | NetVLAD       | :x:                |VGGSound         | ASTest        | 0.468 | 0.951 | 2.344   |
+| F   | ResNet18 | AveragePool   | :x:                |VGGSound         | ASTest        | 0.379 | 0.934 | 2.134   |
+| G   | ResNet18 | NetVLAD       | :x:                |VGGSound         | ASTest        | 0.424 | 0.942 | 2.221   |
 | H   | ResNet18 | AveragePool   | :x:                |VGGSound         | VGGSound      | 0.489 | 0.963 | 2.523   |
 | I   | ResNet18 | NetVLAD       | :x:                |VGGSound         | VGGSound      | 0.496 | 0.963 | 2.534   |
 
