@@ -6,7 +6,7 @@ The repo contains the dataset file and our best audio classification model.
 
 ## Dataset
 
-To download VGGSound, we provide a [csv file](./vggsound.csv). For each YouTube video, we provide YouTube URLs, time stamps, audio labels and train/test split. Each line in the csv file has columns defined by here.
+To download VGGSound, we provide a [csv file](./VGGSound/vggsound.csv). For each YouTube video, we provide YouTube URLs, time stamps, audio labels and train/test split. Each line in the csv file has columns defined by here.
 
 ```
 # YouTube ID, start seconds, label,train/test split. 
@@ -16,7 +16,7 @@ A helpful link for [data download](https://github.com/marl/audiosetdl)!
 
 ## Audio classification 
 
-We detail the audio classfication results here. Note, "Pretrain" refers whether the model was pretrained on YouTube-8M dataset. "Dataset (common)" means it is a subset of the dataset. This subset only contains data of common classes([listed here](./Common.txt)) between AudioSet and VGGSound. "ASTest" is the intersection of AudioSet and VGGSound testsets.
+We detail the audio classfication results here. Note, "Pretrain" refers whether the model was pretrained on [YouTube-8M dataset](https://github.com/tensorflow/models/tree/master/research/audioset/vggish). "Dataset (common)" means it is a subset of the dataset. This subset only contains data of common classes ([listed here](./VGGSound/Common.txt)) between AudioSet and VGGSound. "[ASTest](./VGGSound/AStest.csv)" is the intersection of AudioSet and VGGSound testsets.
 
 | 	  | Model    | Aggregation   | Pretrain           | Finetune/Train  | Test          | mAP   | AUC   | d-prime |
 |:---:|:--------:|:-------------:| :-------------:    |:--------------: |:-------------:|:-----:|:-----:|:-------:| 
@@ -41,7 +41,7 @@ We detail the audio classfication results here. Note, "Pretrain" refers whether 
 
 ## Pretrained model and evaluation 
 
-We provide the pretrained model **I** here.
+We provide the pretrained model **H** and **I** here.
 
 To evaluate the model performance,
 
