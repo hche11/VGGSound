@@ -6,7 +6,7 @@ The repo contains the dataset file and our best audio classification model.
 
 ## Dataset
 
-To download VGGSound, we provide a [csv file](./VGGSound/vggsound.csv). For each YouTube video, we provide YouTube URLs, time stamps, audio labels and train/test split. Each line in the csv file has columns defined by here.
+To download VGGSound, we provide a [csv file](./data/vggsound.csv). For each YouTube video, we provide YouTube URLs, time stamps, audio labels and train/test split. Each line in the csv file has columns defined by here.
 
 ```
 # YouTube ID, start seconds, label,train/test split. 
@@ -16,7 +16,7 @@ A helpful link for [data download](https://github.com/marl/audiosetdl)!
 
 ## Audio classification 
 
-We detail the audio classfication results here. Note, "Pretrain" refers whether the model was pretrained on [YouTube-8M dataset](https://github.com/tensorflow/models/tree/master/research/audioset/vggish). "Dataset (common)" means it is a subset of the dataset. This subset only contains data of common classes ([listed here](./VGGSound/Common.txt)) between AudioSet and VGGSound. "[ASTest](./VGGSound/AStest.csv)" is the intersection of AudioSet and VGGSound testsets.
+We detail the audio classfication results here. Note, "Pretrain" refers whether the model was pretrained on [YouTube-8M dataset](https://github.com/tensorflow/models/tree/master/research/audioset/vggish). "Dataset (common)" means it is a subset of the dataset. This subset only contains data of common classes ([listed here](./data/Common.txt)) between AudioSet and VGGSound. "[ASTest](./data/AStest.csv)" is the intersection of AudioSet and VGGSound testsets.
 
 | 	  | Model    | Aggregation   | Pretrain           | Finetune/Train  | Test          | mAP   | AUC   | d-prime |
 |:---:|:--------:|:-------------:| :-------------:    |:--------------: |:-------------:|:-----:|:-----:|:-------:| 
@@ -25,10 +25,10 @@ We detail the audio classfication results here. Note, "Pretrain" refers whether 
 | C   | VGGish   | \             | :x:                |VGGSound (common)| ASTest        | 0.301 | 0.910 | 1.900   |
 | D   | ResNet18 | AveragePool   | :x:                |VGGSound (common)| ASTest        | 0.328 | 0.923 | 2.024   |
 | E   | ResNet18 | NetVLAD       | :x:                |VGGSound (common)| ASTest        | 0.369 | 0.927 | 2.058   |
-| F   | ResNet18 | AveragePool   | :x:                |VGGSound         | ASTest        | 0.379 | 0.934 | 2.134   |
-| G   | ResNet18 | NetVLAD       | :x:                |VGGSound         | ASTest        | 0.424 | 0.942 | 2.221   |
-| H   | ResNet18 | AveragePool   | :x:                |VGGSound         | VGGSound      | 0.489 | 0.963 | 2.523   |
-| I   | ResNet18 | NetVLAD       | :x:                |VGGSound         | VGGSound      | 0.496 | 0.963 | 2.534   |
+| F   | ResNet18 | AveragePool   | :x:                |VGGSound         | ASTest        | 0.397 | 0.942 | 2.217   |
+| G   | ResNet18 | NetVLAD       | :x:                |VGGSound         | ASTest        |  |  |    |
+| H   | ResNet18 | AveragePool   | :x:                |VGGSound         | VGGSound      | 0.516 | 0.968 | 2.627   |
+| I   | ResNet18 | NetVLAD       | :x:                |VGGSound         | VGGSound      | | |   |
 
 
 
@@ -38,18 +38,22 @@ We detail the audio classfication results here. Note, "Pretrain" refers whether 
 * Pytorch 1.3.0
 
 
-
 ## Pretrained model and evaluation 
 
-We provide the pretrained model **H** and **I** here.
+We provide the pretrained [**model H**](https://www.dropbox.com/s/jhyy73z5l0mjq23/vggsound_avgpool.pth.tar?dl=0) and **model I** here.
 
-To evaluate the model performance,
+To test the model and generate prediction files,
 
 ```
-python eval.py --data "./test.csv" --prediction "./resnet18_vlad/"
+python test.py --data_path "directory to audios/" --result_path "directory to predictions/" --summaries "path to pretrained models" --pool "avgpool"
 ```
 
 
+To evaluate the model performance using the generated prediction files,
+
+```
+python eval.py --result_path "directory to predictions/"
+```
 
 ## Citation
 ```
