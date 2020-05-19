@@ -239,7 +239,6 @@ class Bottleneck(nn.Module):
         identity = x
 
         out = self.conv1(x)
-        #  pdb.set_trace()
         out = self.bn1(out)
         out = self.relu(out)
 

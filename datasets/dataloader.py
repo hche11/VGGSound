@@ -10,7 +10,6 @@ import time
 from PIL import Image
 import glob
 import sys
-import scipy.io.wavfile as wav
 from scipy import signal
 import random
 import soundfile as sf

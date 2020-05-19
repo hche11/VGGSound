@@ -1,7 +1,6 @@
 import csv
 import numpy as np
 from utils import *
-import glob
 import argparse
 
 def get_arguments():
