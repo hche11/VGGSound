@@ -101,7 +101,7 @@ def main():
     print("Loaded dataloader.")
 
     model.eval()
-    for step, (spec, audio,label,name) in enumerate(testdataloader):
+    for step, (spec, audio, label, name) in enumerate(testdataloader):
         print('%d / %d' % (step,len(testdataloader) - 1))
         spec = Variable(spec).cuda()
         label = Variable(label).cuda()
