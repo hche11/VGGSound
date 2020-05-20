@@ -64,7 +64,7 @@ python eval.py --result_path "directory to predictions/"
 @InProceedings{Chen20,
   author       = "Honglie Chen and Weidi Xie and Andrea Vedaldi and Andrew Zisserman",
   title        = "VGGSound: A Large-scale Audio-Visual Dataset",
-  booktitle    = "International Conference on Acoustics, Speech, and Signal Processing ",
+  booktitle    = "International Conference on Acoustics, Speech, and Signal Processing (ICASSP)",
   year         = "2020",
 }
 ```
