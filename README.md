@@ -29,10 +29,10 @@ We detail the audio classfication results here.
 | C   | VGGish   | \             | :x:                |VGGSound (common)| ASTest        | 0.301 | 0.910 | 1.900   |
 | D   | ResNet18 | AveragePool   | :x:                |VGGSound (common)| ASTest        | 0.328 | 0.923 | 2.024   |
 | E   | ResNet18 | NetVLAD       | :x:                |VGGSound (common)| ASTest        | 0.369 | 0.927 | 2.058   |
-| F   | ResNet18 | AveragePool   | :x:                |VGGSound         | ASTest        | 0.397 | 0.942 | 2.217   |
-| G   | ResNet18 | NetVLAD       | :x:                |VGGSound         | ASTest        |  |  |    |
+| F   | ResNet18 | AveragePool   | :x:                |VGGSound         | ASTest        | 0.404 | 0.944 | 2.253   |
+| G   | ResNet18 | NetVLAD       | :x:                |VGGSound         | ASTest        | 0.434 | 0.950 | 2.327   |
 | H   | ResNet18 | AveragePool   | :x:                |VGGSound         | VGGSound      | 0.516 | 0.968 | 2.627   |
-| I   | ResNet18 | NetVLAD       | :x:                |VGGSound         | VGGSound      | | |   |
+| I   | ResNet18 | NetVLAD       | :x:                |VGGSound         | VGGSound      | 0.512 | 0.970 | 2.660   |
 
 
 
@@ -44,7 +44,7 @@ We detail the audio classfication results here.
 
 ## Pretrained model and evaluation 
 
-We provide the pretrained [**model H**](https://www.dropbox.com/s/jhyy73z5l0mjq23/vggsound_avgpool.pth.tar?dl=0) and **model I** here.
+We provide the pretrained [**model H**](https://www.dropbox.com/s/jhyy73z5l0mjq23/vggsound_avgpool.pth.tar?dl=0) and [**model I**](https://www.dropbox.com/s/vbotzzoyo0xnvbh/vggsound_netvlad.pth.tar?dl=0) here.
 
 To test the model and generate prediction files,
 
