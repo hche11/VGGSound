@@ -18,9 +18,9 @@ A helpful link for [data download](https://github.com/marl/audiosetdl)!
 
 We detail the audio classfication results here. 
 
-* "Pretrain" refers whether the model was pretrained on [YouTube-8M dataset](https://github.com/tensorflow/models/tree/master/research/audioset/vggish). 
-* "Dataset (common)" means it is a subset of the dataset. This subset only contains data of common classes ([listed here](./data/Common.txt)) between AudioSet and VGGSound. 
-* "[ASTest](./data/AStest.csv)" is the intersection of AudioSet and VGGSound testsets.
+* Pretrain refers whether the model was pretrained on [YouTube-8M dataset](https://github.com/tensorflow/models/tree/master/research/audioset/vggish). 
+* Dataset (common) means it is a subset of the dataset. This subset only contains data of common classes ([listed here](./data/Common.txt)) between AudioSet and VGGSound. 
+* [ASTest](./data/AStest.csv) is the intersection of AudioSet and VGGSound testsets.
 
 | 	  | Model    | Aggregation   | Pretrain           | Finetune/Train  | Test          | mAP   | AUC   | d-prime |
 |:---:|:--------:|:-------------:| :-------------:    |:--------------: |:-------------:|:-----:|:-----:|:-------:| 
