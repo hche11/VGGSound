@@ -48,7 +48,7 @@ def main():
 
 
     for count,item in enumerate(data):
-        pred = np.load(args.prediction_path + item + '.npy')
+        pred = np.load(args.result_path + item + '.npy')
 
         label = data2class[item.split('/')[-1]]
         label_index = []
