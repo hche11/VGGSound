@@ -31,7 +31,7 @@ class GetAudioVideoDataset(Dataset):
         with open(args.csv_path  + args.test) as f:
             csv_reader = csv.reader(f)
             for item in csv_reader:
-                if item[1] in classes:
+                if item[1] in classes and os.path.exists(args.data_path + item[0][:-3] + 'wav')::
                     data.append(item[0])
                     data2class[item[0]] = item[1]
 

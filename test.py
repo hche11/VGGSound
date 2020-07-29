@@ -112,6 +112,10 @@ def main():
         for i, item in enumerate(name):
             np.save(args.result_path + '/%s.npy' % item,prediction[i].cpu().data.numpy())
 
+            # print example scores 
+            # print('%s, label : %s, prediction score : %.3f' % (
+            #     name[i][:-4], testdataset.classes[label[i]], prediction[i].cpu().data.numpy()[label[i]]))
+
 
 
 if __name__ == "__main__":
