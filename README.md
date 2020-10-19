@@ -33,7 +33,10 @@ We detail the audio classfication results here.
 | G   | ResNet18 | NetVLAD       | :x:                |VGGSound         | ASTest        | 0.434 | 0.950 | 2.327   |
 | H   | ResNet18 | AveragePool   | :x:                |VGGSound         | VGGSound      | 0.516 | 0.968 | 2.627   |
 | I   | ResNet18 | NetVLAD       | :x:                |VGGSound         | VGGSound      | 0.512 | 0.970 | 2.660   |
-
+| J   | ResNet34 | AveragePool   | :x:                |VGGSound         | ASTest        | 0.409 | 0.947 | 2.292   |
+| K   | ResNet34 | AveragePool   | :x:                |VGGSound         | VGGSound      | 0.529 | 0.972 | 2.703   |
+| L   | ResNet50 | AveragePool   | :x:                |VGGSound         | ASTest        | 0.412 | 0.949 | 2.309   |
+| M   | ResNet50 | AveragePool   | :x:                |VGGSound         | VGGSound      | 0.532 | 0.973 | 2.735   |
 
 
 ## Environment
