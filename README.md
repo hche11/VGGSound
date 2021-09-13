@@ -12,7 +12,7 @@ To download VGGSound, we provide a [csv file](./data/vggsound.csv). For each You
 # YouTube ID, start seconds, label,train/test split. 
 ```
 
-A helpful link for [data download](https://github.com/marl/audiosetdl)!
+A helpful link for [data download](https://github.com/speedyseal/audiosetdl)!
 
 ## Audio classification 
 
@@ -47,7 +47,7 @@ We detail the audio classfication results here.
 
 ## Pretrained model and evaluation 
 
-We provide the pretrained [**model H**](https://www.dropbox.com/s/jhyy73z5l0mjq23/vggsound_avgpool.pth.tar?dl=0) and [**model I**](https://www.dropbox.com/s/vbotzzoyo0xnvbh/vggsound_netvlad.pth.tar?dl=0) here.
+We provide the pretrained [**model H**](http://www.robots.ox.ac.uk/~vgg/data/vggsound/models/vggsound_avg.pth.tar) and [**model I**](http://www.robots.ox.ac.uk/~vgg/data/vggsound/models/vggsound_netvlad.pth.tar) here.
 
 To test the model and generate prediction files,
 
