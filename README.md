@@ -47,7 +47,11 @@ We detail the audio classfication results here.
 
 ## Pretrained model and evaluation 
 
-We provide the pretrained [**model H**](http://www.robots.ox.ac.uk/~vgg/data/vggsound/models/vggsound_avg.pth.tar) and [**model I**](http://www.robots.ox.ac.uk/~vgg/data/vggsound/models/vggsound_netvlad.pth.tar) here.
+We provide the pretrained models **H** an **I** here,
+```
+wget http://www.robots.ox.ac.uk/~vgg/data/vggsound/models/H.pth.tar
+wget http://www.robots.ox.ac.uk/~vgg/data/vggsound/models/I.pth.tar
+```
 
 To test the model and generate prediction files,
 
